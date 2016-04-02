@@ -60,11 +60,17 @@ public class Plink_Game {
 		// Check if user pressed start
 		if (startGame.equalsIgnoreCase("S")) {
 
-			// Calling getUsersNames Method
+			// Call getUsersNames Method
 			getUsersNames();
 
-			// Calling user1turn
+			// Call user1turn Method
 			user1turn();
+			
+			// Call user2turn Method
+			user2turn();
+			
+			// Call determineWinner Method
+			determineWinner();
 
 		} else {
 			System.out.println("Maybe next time");
@@ -110,12 +116,25 @@ public class Plink_Game {
 		
 	}
 
-	public static void dropBall() { // <-- 5th Method
+	public static void dropBall() { // <--- 5th Method
 		// This is where I will put the loop for the ball to drop
+		// This method will go inside both user methods
 
 
 
 
+	}
+	
+	public static void determineWinner() { // <--- 6th Method
+		// This is where I will determine the winner
+		if (user1Points > user2Points) {
+			System.out.println(user1 + " wins with a total of "
+							+ user1Points + " points!!!");
+		} else {
+			System.out.println(user2 + " wins with a total of "
+							+ user2Points + " points!!!");
+		}
+		
 	}
 
 }
